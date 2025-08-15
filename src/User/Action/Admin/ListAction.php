@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\User\Action\Admin;
 
 use App\Auth\Enum\Role;
-use App\OpenApi\Attribute\SuccessResponse;
 use App\Shared\Model\ApiResponse;
 use App\Shared\Model\PaginationRequest;
 use App\User\Entity\User;
@@ -25,7 +24,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 )]
 #[OA\Tag('User')]
 #[IsGranted(Role::ADMIN->value)]
-//#[SuccessResponse(User::class, groups: ['user:list'], isList: true)]
+// #[SuccessResponse(User::class, groups: ['user:list'], isList: true)]
 #[AsController]
 final readonly class ListAction
 {

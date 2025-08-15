@@ -7,14 +7,10 @@ namespace App\User\Action\Admin;
 use App\Auth\Enum\Role;
 use App\OpenApi\Attribute\SuccessResponse;
 use App\Shared\Model\ApiResponse;
-use App\Shared\Model\PaginationRequest;
 use App\User\Entity\User;
-use App\User\Provider\UserProvider;
 use OpenApi\Attributes as OA;
-use Pagerfanta\Pagerfanta;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\AsController;
-use Symfony\Component\HttpKernel\Attribute\MapQueryString;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 

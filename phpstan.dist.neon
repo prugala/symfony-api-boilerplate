@@ -3,3 +3,5 @@ parameters:
     level: 8
     paths:
         - src/
+    ignoreErrors:
+        - '#Property .+::\$id is never written, only read\.#'
