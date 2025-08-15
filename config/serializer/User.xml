@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping
+        https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="App\User\Entity\User">
+        <attribute name="email">
+            <group>user:get</group>
+            <group>user:list</group>
+            <group>password-token:get</group>
+        </attribute>
+        <attribute name="roles">
+            <group>user:get</group>
+            <group>user:list</group>
+        </attribute>
+    </class>
+</serializer>
