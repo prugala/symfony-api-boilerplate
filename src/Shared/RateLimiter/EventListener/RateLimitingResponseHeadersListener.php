@@ -14,10 +14,18 @@ final readonly class RateLimitingResponseHeadersListener
 {
     public function __invoke(ResponseEvent $event): void
     {
-        if (($rateLimit = $event->getRequest()->attributes->get('rate_limit')) instanceof RateLimit) {
+        $rateLimit = $event->getRequest()->attributes->get('rate_limit');
+
+        if (!$event->isMainRequest()) {
+            return;
+        }
+
+        if ($rateLimit instanceof RateLimit) {
+            $retryAfter = $rateLimit->getRetryAfter();
+            $reset = $retryAfter instanceof \DateTimeInterface ? max(0, $retryAfter->getTimestamp() - time()) : 0;
             $event->getResponse()->headers->add([
                 'RateLimit-Remaining' => $rateLimit->getRemainingTokens(),
-                'RateLimit-Reset' => time() - $rateLimit->getRetryAfter()->getTimestamp(),
+                'RateLimit-Reset' => $reset,
                 'RateLimit-Limit' => $rateLimit->getLimit(),
             ]);
         }
