@@ -71,16 +71,8 @@
 Create `.env.local` file for local development:
 
 ```bash
-# Database
-DATABASE_URL="postgresql://app:!ChangeMe!@database:5432/app?serverVersion=16&charset=utf8"
-
-# JWT Configuration
-JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/private.pem
-JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/public.pem
-JWT_PASSPHRASE=your_jwt_passphrase
-
-# CORS Configuration
-CORS_ALLOW_ORIGIN=^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$
+JWT_PASSPHRASE='YourSecretPassphrase'
+APP_SECRET='YourAppSecret'
 
 # Mailer
 MAILER_DSN=smtp://localhost:1025
@@ -222,8 +214,11 @@ docker compose exec php bin/console doctrine:fixtures:load
    ```bash
    APP_ENV=prod
    APP_DEBUG=false
+   JWT_PASSPHRASE='YourSecretPassphrase'
+   APP_SECRET='YourAppSecret'
    CORS_ALLOW_ORIGIN=https://yourdomain.com
    DATABASE_URL=postgresql://user:pass@host:5432/dbname
+   SENTRY_DSN=https://your-sentry-dsn
    ```
 
 2. **Build Production Image**
@@ -242,7 +237,6 @@ docker compose exec php bin/console doctrine:fixtures:load
 - **FrankenPHP** provides excellent performance out of the box
 - **Rate limiting** helps protect against abuse
 - **JWT tokens** are stateless and scalable
-- **Database indexing** is properly configured for User entities
 
 ## 🏗️ Architecture
 
