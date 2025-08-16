@@ -272,11 +272,14 @@ src/
 
 ## 🔮 Roadmap
 
+- [ ] Fix problem with multiple `SuccessResponse` attribute in multiple controllers
+- [ ] Ratelimiter for Reset password endpoints and login endpoint
 - [ ] Implement API versioning strategy
 - [ ] Add caching layer for improved performance
 - [ ] Add health check endpoint
 - [ ] Add support for Notifier component
 - [ ] Add sending email for password reset
 - [ ] Add fixtures for local development
+- [ ] Multifactor authentication
 
 *This README was reviewed and improved with the assistance of AI.*
