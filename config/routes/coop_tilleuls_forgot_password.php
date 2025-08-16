@@ -6,10 +6,7 @@ use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return static function (RoutingConfigurator $routingConfigurator): void {
     $routingConfigurator->import('@CoopTilleulsForgotPasswordBundle/Resources/config/routing.xml')
-        ->prefix('/api/auth/forgot-password')
-        ->options([
-            'trailing_slash_on_root' => false,
-        ]);
+        ->prefix('/api/auth/forgot-password');
     $routingConfigurator->add('coop_tilleuls_forgot_password.reset', '/api/auth/forgot-password')
         ->controller('coop_tilleuls_forgot_password.controller.reset_password')
         ->methods([
