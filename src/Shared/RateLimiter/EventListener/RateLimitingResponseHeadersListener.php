@@ -22,7 +22,7 @@ final readonly class RateLimitingResponseHeadersListener
 
         if ($rateLimit instanceof RateLimit) {
             $retryAfter = $rateLimit->getRetryAfter();
-            $reset = $retryAfter instanceof \DateTimeInterface ? max(0, $retryAfter->getTimestamp() - time()) : 0;
+            $reset = max(0, $retryAfter->getTimestamp() - time());
             $event->getResponse()->headers->add([
                 'RateLimit-Remaining' => $rateLimit->getRemainingTokens(),
                 'RateLimit-Reset' => $reset,
