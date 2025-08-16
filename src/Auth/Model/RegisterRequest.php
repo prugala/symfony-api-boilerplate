@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints\PasswordStrength;
 final readonly class RegisterRequest
 {
     public function __construct(
-        #[Email]
+        #[Email(mode: Email::VALIDATION_MODE_STRICT)]
         #[EmailAlreadyExists]
         #[NotBlank]
         public string $email,
