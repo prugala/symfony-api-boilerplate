@@ -1,97 +1,283 @@
 # Symfony REST API Boilerplate
 
-> A Docker-based boilerplate for building REST APIs with Symfony.  
+[![PHP Version](https://img.shields.io/badge/php-%3E%3D8.4-blue.svg)](https://php.net/)
+[![Symfony Version](https://img.shields.io/badge/symfony-7.3-green.svg)](https://symfony.com/)
+[![Docker](https://img.shields.io/badge/docker-enabled-blue.svg)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+
+> A production-ready, Docker-based boilerplate for building secure and scalable REST APIs with Symfony 7.3. Features modern PHP practices, comprehensive security measures, and developer-friendly tooling.  
 > Docker configuration based on [Symfony Docker](https://github.com/dunglas/symfony-docker)
 
-## Getting Started
+## 🚀 Features
 
-1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
-2. Run `docker compose build --pull --no-cache` to build fresh images
-3. Run `docker compose up --wait` to set up and start a fresh Symfony project
-4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
-5. Run `docker compose down --remove-orphans` to stop the Docker containers.
+### 🔐 Security & Authentication
+- **JWT Authentication** with refresh token support
+- **Rate Limiting** with attribute-based rate limiting
+- **CORS Configuration** with environment-based origin control
+- **Enhanced Email Validation** with strict mode and duplicate checking
+- **Password Strength Validation** with configurable security levels
+- **Password Reset** functionality with secure token management
 
-## Features
+### 🏗️ Architecture & Code Quality
+- **Modern Symfony 7.3** with PHP 8.4+ support
+- **Clear module** separation
+- **PHP configuration** with `.env` file
+- **FrankenPHP** runtime for enhanced performance
+- **Docker containerization** with production-ready configuration
+- **OpenAPI/Swagger** documentation (`/api/doc` and `/api/doc.json`)
+- **Comprehensive testing** with PHPUnit
+- **Code quality tools**: PHPStan, PHP CS Fixer, Rector
 
-* OpenAPI (Swagger https://localhost/api/doc / https://localhost/api/doc.json)
-* JWT Authentication with Refresh Token
-* Reset password with email
-* Pagination with Pagerfanta
-* API Responses with `ApiResponse` and `ApiErrorResponse`
-* Serialization groups based on roles
-* Exception handling
-* Simple documentation of success responses
-* Unit tests with PHPUnit
-* PHPStan
-* PHP CS Fixer
+### 📡 API Features
+- **Consistent API responses** with `ApiResponse` and `ApiErrorResponse`
+- **Pagination support** with Pagerfanta integration
+- **Role-based serialization** groups
+- **Exception handling** with proper HTTP status codes
+- **Request validation** with Symfony Validator
+- **Automated API documentation** with success response attribute `#[SuccessResponse(User::class)` or `#[SuccessResponse(User::class, isList: true)]` for paginated responses
+- **Sentry integration**
 
-### API Responses with `ApiResponse`
+## 🛠️ Quick Start
 
-- `ApiResponse` - for successful responses: single object, paginated collection (`Pagerfanta` object)
-- `ApiErrorResponse` - for error responses
+### Prerequisites
+- Docker & Docker Compose
 
-Example:
-`return new ApiResponse($post, groups: ['post:get']);`
+### Installation
 
+1. **Clone and build**
+   ```bash
+   git clone <repository-url>
+   cd symfony-api-boilerplate
+   docker compose build --pull --no-cache
+   ```
+
+2. **Start the application**
+   ```bash
+   docker compose up --wait
+   ```
+
+3. **Access the application**
+    - API: `https://localhost`
+    - Documentation: `https://localhost/api/doc`
+    - Accept the auto-generated TLS certificate when prompted
+
+4. **Stop the application**
+   ```bash
+   docker compose down --remove-orphans
+   ```
+
+## 📋 Environment Configuration
+
+Create `.env.local` file for local development:
+
+```bash
+# Database
+DATABASE_URL="postgresql://app:!ChangeMe!@database:5432/app?serverVersion=16&charset=utf8"
+
+# JWT Configuration
+JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/private.pem
+JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/public.pem
+JWT_PASSPHRASE=your_jwt_passphrase
+
+# CORS Configuration
+CORS_ALLOW_ORIGIN=^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$
+
+# Mailer
+MAILER_DSN=smtp://localhost:1025
 ```
+
+## 🔧 Configuration Details
+
+### Rate Limiting
+
+The application includes comprehensive rate limiting with attribute-based rule: `#[RateLimiting('limiter name')]`:
+
+Rate limiting can be disabled by setting parameter `rate_limiter.enabled` to `false` in `config/packages/rate_limiter.php`.
+
+### CORS Policy
+
+- **Origins**: Configurable via `CORS_ALLOW_ORIGIN` environment variable
+- **Methods**: GET, POST, PUT, PATCH, DELETE, OPTIONS
+- **Headers**: Content-Type, Authorization
+- **Preflight Cache**: 3600 seconds
+
+### Email Validation
+
+Enhanced email validation includes:
+- **Strict RFC compliance** validation
+
+## 📚 API Documentation
+
+### Authentication Flow
+
+1. **Register a new user**
+   ```bash
+   curl -X POST https://localhost/api/auth/register \
+     -H "Content-Type: application/json" \
+     -d '{"email": "user@example.com", "password": "SecurePass123!"}'
+   ```
+
+2. **Login to get tokens**
+   ```bash
+   curl -X POST https://localhost/api/auth/token \
+     -H "Content-Type: application/json" \
+     -d '{"username": "user@example.com", "password": "SecurePass123!"}'
+   ```
+
+3. **Use the JWT token**
+   ```bash
+   curl -X GET https://localhost/api/protected-endpoint \
+     -H "Authorization: Bearer YOUR_JWT_TOKEN"
+   ```
+
+4. **Refresh expired token**
+   ```bash
+   curl -X POST https://localhost/api/auth/token/refresh \
+     -H "Content-Type: application/json" \
+     -d '{"refresh_token": "YOUR_REFRESH_TOKEN"}'
+   ```
+
+### API Response Format
+
+**Success Response:**
+```json
 {
-    "data": {
-        "id": 1,
-        "title": "My first post",
-        "description": "This is my first post",
+  "data": {
+    "id": 1,
+    "email": "user@example.com",
+    "roles": ["ROLE_USER"]
+  }
+}
+```
+
+**Paginated Response:**
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Example Item"
     }
+  ],
+  "total": 25,
+  "has_next_page": true,
+  "has_previous_page": false
 }
 ```
 
-`return new ApiResponse($posts, groups: ['post:list']);`
-
-```
+**Validation Response:**
+```json
 {
-    "data": [
-        {
-            "id": 1,
-            "title": "My first post",
-            "description": "This is my first post",
-        },
-    ],
-    "total": 2,
-    "has_next_page": true,
-    "has_previous_page": false
-}        
-```
-
-### Serialization groups based on roles
-Convention in group names is `entity:action`. For example, `user:read` means that the entity is `User` and the action is `read`.
-So if you want to serialize some field in `User` entity only for `ROLE_USER` role, you should add `user:read:user` in serialization configuration. 
-In serialization groups you don't need to specify role name, it will be added automatically.
-
-Example:
-Serialization configuration:
-```xml
-<attribute name="description">
-    <group>post:get:admin</group>
-</attribute>
-```
-
-Controller action:
-```php
-public function __invoke()
-{
-    return new ApiResponse($post, groups: ['post:get']);
+  "message": "Validation failed",
+  "code": "UUID",
+  "violations": [
+      {
+      "field": "id",
+      "message": "This value should be a valid UUID."
+    } 
+  ]
 }
 ```
 
-When you call this action as `ROLE_ADMIN`, you will get `description` field in response.
+**Error Response:**
+```json
+{
+  "message": "Validation failed",
+  "code": "UUID"
+}
+```
 
-### Simple documentation of success responses
-To document your API responses use attribute `SuccessResponse`. In OpenAPI documentation you will see the response related to ApiResponse object.
+## 🧪 Development
 
-Example:
-- for item: `#[SuccessResponse(ExampleResponse::class, groups: ['example:get'])]`
-- for collection: `#[SuccessResponse(ExampleResponse::class, groups: ['example:list'], isList: true)]`
+### Code Quality Commands
 
+```bash
+# Run all tests
+docker compose exec php composer test
 
-## TODO
- - add Notifier and email for reset password
- - fix problem with api doc when using `SuccessResponse` in multiple controllers
- - add change password by user
+# Check code quality
+docker compose exec php composer check
+
+# Fix code style issues
+docker compose exec php composer fix
+```
+
+### Database Operations
+
+```bash
+# Create migration
+docker compose exec php bin/console make:migration
+
+# Run migrations
+docker compose exec php bin/console doctrine:migrations:migrate
+
+# Load fixtures (if available)
+docker compose exec php bin/console doctrine:fixtures:load
+```
+
+## 🚀 Deployment
+
+### Production Environment
+
+1. **Environment Variables**
+   ```bash
+   APP_ENV=prod
+   APP_DEBUG=false
+   CORS_ALLOW_ORIGIN=https://yourdomain.com
+   DATABASE_URL=postgresql://user:pass@host:5432/dbname
+   ```
+
+2. **Build Production Image**
+   ```bash
+   docker compose -f compose.prod.yaml build
+   docker compose -f compose.prod.yaml up -d
+   ```
+
+3. **SSL/TLS Configuration**
+    - The application includes auto-generated certificates for development
+    - For production, configure proper SSL certificates
+    - Update CORS origins to match your domain
+
+### Performance Considerations
+
+- **FrankenPHP** provides excellent performance out of the box
+- **Rate limiting** helps protect against abuse
+- **JWT tokens** are stateless and scalable
+- **Database indexing** is properly configured for User entities
+
+## 🏗️ Architecture
+
+### Project Structure
+
+```
+src/
+├── Auth/           # Authentication & authorization
+│   ├── Action/     # HTTP controllers
+│   ├── Entity/     # Doctrine entities
+│   └── Model/      # DTOs and value objects
+├── User/           # User management
+├── Shared/         # Shared utilities and services
+│   ├── RateLimiter/ # Rate limiting implementation
+│   └── EventListener/ # Global event listeners
+└── OpenApi/        # API documentation utilities
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Run tests and quality checks (`composer check`)
+4. Commit your changes (`git commit -m 'Add amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+## 🔮 Roadmap
+
+- [ ] Implement API versioning strategy
+- [ ] Add caching layer for improved performance
+- [ ] Add health check endpoint
+- [ ] Add support for Notifier component
+- [ ] Add sending email for password reset
+- [ ] Add fixtures for local development
+
+*This README was reviewed and improved with the assistance of AI.*
