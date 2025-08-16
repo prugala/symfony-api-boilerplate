@@ -92,7 +92,6 @@ Example:
 
 
 ## TODO
- - fix trailing slash in route `/api/auth/forgot-password/`
  - add Notifier and email for reset password
  - fix problem with api doc when using `SuccessResponse` in multiple controllers
  - add change password by user
