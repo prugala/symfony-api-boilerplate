@@ -168,7 +168,6 @@ Enhanced email validation includes:
 **Validation Response:**
 ```json
 {
-  "message": "Validation failed",
   "code": "UUID",
   "violations": [
       {
