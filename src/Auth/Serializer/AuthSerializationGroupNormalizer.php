@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Auth\Serializer;
 
-use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Core\Role\RoleHierarchyInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 #[AutoconfigureTag('serializer.normalizer', ['priority' => -1000])]
@@ -18,7 +19,8 @@ final readonly class AuthSerializationGroupNormalizer implements NormalizerInter
     public function __construct(
         #[Autowire(service: 'serializer.normalizer.object')]
         private NormalizerInterface $normalizer,
-        private Security $security,
+        private TokenStorageInterface $tokenStorage,
+        private RoleHierarchyInterface $roleHierarchy,
     ) {
     }
 
@@ -57,7 +59,8 @@ final readonly class AuthSerializationGroupNormalizer implements NormalizerInter
     /** @return array<string> */
     private function getRoles(): array
     {
-        $user = $this->security->getUser();
+        $token = $this->tokenStorage->getToken();
+        $user = $token?->getUser();
 
         if (null === $user) {
             return [self::GUEST_ROLE];
@@ -65,7 +68,7 @@ final readonly class AuthSerializationGroupNormalizer implements NormalizerInter
 
         $roles = [];
 
-        foreach ($user->getRoles() as $role) {
+        foreach ($this->roleHierarchy->getReachableRoleNames($token->getRoleNames()) as $role) {
             $roles[] = strtolower(substr($role, strlen(self::ROLE_PREFIX)));
         }
 
