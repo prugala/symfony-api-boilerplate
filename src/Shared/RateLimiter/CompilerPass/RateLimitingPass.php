@@ -18,7 +18,7 @@ final readonly class RateLimitingPass implements CompilerPassInterface
         $taggedServices = $container->findTaggedServiceIds('controller.service_arguments');
 
         /** @var Definition[] $serviceDefinitions */
-        $serviceDefinitions = array_map(fn (string $id) => $container->getDefinition($id), array_keys($taggedServices));
+        $serviceDefinitions = array_map($container->getDefinition(...), array_keys($taggedServices));
 
         $rateLimiterClassMap = [];
 
