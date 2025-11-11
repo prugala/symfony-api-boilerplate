@@ -2045,16 +2045,16 @@
         },
         {
             "name": "pagerfanta/pagerfanta",
-            "version": "v4.7.1",
+            "version": "v4.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BabDev/Pagerfanta.git",
-                "reference": "b09216fc53665c4d8a39b7f60e421165cb4693e4"
+                "reference": "9320a542e1ed8d1a099a3d380685870e8bb5d553"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BabDev/Pagerfanta/zipball/b09216fc53665c4d8a39b7f60e421165cb4693e4",
-                "reference": "b09216fc53665c4d8a39b7f60e421165cb4693e4",
+                "url": "https://api.github.com/repos/BabDev/Pagerfanta/zipball/9320a542e1ed8d1a099a3d380685870e8bb5d553",
+                "reference": "9320a542e1ed8d1a099a3d380685870e8bb5d553",
                 "shasum": ""
             },
             "require": {
@@ -2084,7 +2084,7 @@
                 "pagerfanta/twig": "self.version"
             },
             "require-dev": {
-                "dg/bypass-finals": "^1.5.1",
+                "dg/bypass-finals": "^1.9",
                 "doctrine/collections": "^1.8 || ^2.0",
                 "doctrine/dbal": "^3.5 || ^4.0",
                 "doctrine/mongodb-odm": "^2.4",
@@ -2092,10 +2092,10 @@
                 "doctrine/phpcr-odm": "^1.7 || ^2.0",
                 "jackalope/jackalope-doctrine-dbal": "^1.9 || ^2.0",
                 "phpstan/extension-installer": "^1.4",
-                "phpstan/phpstan": "2.0.3",
-                "phpstan/phpstan-phpunit": "2.0.1",
-                "phpunit/phpunit": "10.5.39",
-                "rector/rector": "2.0.3",
+                "phpstan/phpstan": "2.1.31",
+                "phpstan/phpstan-phpunit": "2.0.7",
+                "phpunit/phpunit": "10.5.58",
+                "rector/rector": "2.2.3",
                 "ruflin/elastica": "^7.3 || ^8.0",
                 "solarium/solarium": "^6.2",
                 "symfony/cache": "^5.4 || ^6.3 || ^7.0",
@@ -2134,7 +2134,7 @@
             ],
             "support": {
                 "issues": "https://github.com/BabDev/Pagerfanta/issues",
-                "source": "https://github.com/BabDev/Pagerfanta/tree/v4.7.1"
+                "source": "https://github.com/BabDev/Pagerfanta/tree/v4.7.2"
             },
             "funding": [
                 {
@@ -2142,7 +2142,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-13T15:12:11+00:00"
+            "time": "2025-10-12T17:35:33+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
