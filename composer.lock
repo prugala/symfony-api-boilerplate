@@ -2194,16 +2194,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.6.3",
+            "version": "5.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9"
+                "reference": "90a04bcbf03784066f16038e87e23a0a83cee3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94f8051919d1b0369a6bcc7931d679a511c03fe9",
-                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/90a04bcbf03784066f16038e87e23a0a83cee3c2",
+                "reference": "90a04bcbf03784066f16038e87e23a0a83cee3c2",
                 "shasum": ""
             },
             "require": {
@@ -2252,22 +2252,22 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.3"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.4"
             },
-            "time": "2025-08-01T19:43:32+00:00"
+            "time": "2025-11-17T21:13:10+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.10.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "679e3ce485b99e84c775d28e2e96fade9a7fb50a"
+                "reference": "92a98ada2b93d9b201a613cb5a33584dde25f195"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/679e3ce485b99e84c775d28e2e96fade9a7fb50a",
-                "reference": "679e3ce485b99e84c775d28e2e96fade9a7fb50a",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/92a98ada2b93d9b201a613cb5a33584dde25f195",
+                "reference": "92a98ada2b93d9b201a613cb5a33584dde25f195",
                 "shasum": ""
             },
             "require": {
@@ -2310,9 +2310,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.10.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.12.0"
             },
-            "time": "2024-11-09T15:12:26+00:00"
+            "time": "2025-11-21T15:09:14+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -4227,31 +4227,32 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.8.2",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "f356aa35f3cf3d2f46c31d344c1098eb2d260426"
+                "reference": "9cd384775973eabbf6e8b05784dda279fc67c28d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/f356aa35f3cf3d2f46c31d344c1098eb2d260426",
-                "reference": "f356aa35f3cf3d2f46c31d344c1098eb2d260426",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/9cd384775973eabbf6e8b05784dda279fc67c28d",
+                "reference": "9cd384775973eabbf6e8b05784dda279fc67c28d",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.1",
-                "php": ">=8.0"
+                "php": ">=8.1"
             },
             "conflict": {
-                "composer/semver": "<1.7.2"
+                "composer/semver": "<1.7.2",
+                "symfony/dotenv": "<5.4"
             },
             "require-dev": {
                 "composer/composer": "^2.1",
-                "symfony/dotenv": "^5.4|^6.0",
-                "symfony/filesystem": "^5.4|^6.0",
-                "symfony/phpunit-bridge": "^5.4|^6.0",
-                "symfony/process": "^5.4|^6.0"
+                "symfony/dotenv": "^6.4|^7.4|^8.0",
+                "symfony/filesystem": "^6.4|^7.4|^8.0",
+                "symfony/phpunit-bridge": "^6.4|^7.4|^8.0",
+                "symfony/process": "^6.4|^7.4|^8.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -4275,7 +4276,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.8.2"
+                "source": "https://github.com/symfony/flex/tree/v2.10.0"
             },
             "funding": [
                 {
@@ -4295,7 +4296,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-22T07:17:23+00:00"
+            "time": "2025-11-16T09:38:19+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -7869,16 +7870,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.12.0",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "541057574806f942c94662b817a50f63f7345360"
+                "reference": "9be6926d8b485f55b9229203f962b51ed377ba68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/541057574806f942c94662b817a50f63f7345360",
-                "reference": "541057574806f942c94662b817a50f63f7345360",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9be6926d8b485f55b9229203f962b51ed377ba68",
+                "reference": "9be6926d8b485f55b9229203f962b51ed377ba68",
                 "shasum": ""
             },
             "require": {
@@ -7921,9 +7922,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.12.0"
+                "source": "https://github.com/webmozarts/assert/tree/1.12.1"
             },
-            "time": "2025-10-20T12:43:39+00:00"
+            "time": "2025-10-29T15:56:20+00:00"
         },
         {
             "name": "zircote/swagger-php",
@@ -8883,11 +8884,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.31",
+            "version": "2.1.32",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ead89849d879fe203ce9292c6ef5e7e76f867b96",
-                "reference": "ead89849d879fe203ce9292c6ef5e7e76f867b96",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e126cad1e30a99b137b8ed75a85a676450ebb227",
+                "reference": "e126cad1e30a99b137b8ed75a85a676450ebb227",
                 "shasum": ""
             },
             "require": {
@@ -8932,7 +8933,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-10T14:14:11+00:00"
+            "time": "2025-11-11T15:18:17+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9901,21 +9902,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "2.2.7",
+            "version": "2.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "022038537838bc8a4e526af86c2d6e38eaeff7ef"
+                "reference": "303aa811649ccd1d32e51e62d5c85949d01b5f1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/022038537838bc8a4e526af86c2d6e38eaeff7ef",
-                "reference": "022038537838bc8a4e526af86c2d6e38eaeff7ef",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/303aa811649ccd1d32e51e62d5c85949d01b5f1b",
+                "reference": "303aa811649ccd1d32e51e62d5c85949d01b5f1b",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
-                "phpstan/phpstan": "^2.1.26"
+                "phpstan/phpstan": "^2.1.32"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -9949,7 +9950,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.2.7"
+                "source": "https://github.com/rectorphp/rector/tree/2.2.8"
             },
             "funding": [
                 {
@@ -9957,7 +9958,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-29T15:46:12+00:00"
+            "time": "2025-11-12T18:38:00+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -10982,16 +10983,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v7.3.0",
+            "version": "v7.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2"
+                "reference": "84321188c4754e64273b46b406081ad9b18e8614"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/601a5ce9aaad7bf10797e3663faefce9e26c24e2",
-                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/84321188c4754e64273b46b406081ad9b18e8614",
+                "reference": "84321188c4754e64273b46b406081ad9b18e8614",
                 "shasum": ""
             },
             "require": {
@@ -11027,7 +11028,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v7.3.0"
+                "source": "https://github.com/symfony/css-selector/tree/v7.3.6"
             },
             "funding": [
                 {
@@ -11039,11 +11040,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:21:43+00:00"
+            "time": "2025-10-29T17:24:25+00:00"
         },
         {
             "name": "symfony/dom-crawler",
