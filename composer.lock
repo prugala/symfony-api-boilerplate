@@ -6571,16 +6571,16 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v7.3.5",
+            "version": "v7.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "ba2e50a5f2870c93f0f47ca1a4e56e4bbe274035"
+                "reference": "006fd51717addf2df2bd1a64dafef6b7fab6b455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/ba2e50a5f2870c93f0f47ca1a4e56e4bbe274035",
-                "reference": "ba2e50a5f2870c93f0f47ca1a4e56e4bbe274035",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/006fd51717addf2df2bd1a64dafef6b7fab6b455",
+                "reference": "006fd51717addf2df2bd1a64dafef6b7fab6b455",
                 "shasum": ""
             },
             "require": {
@@ -6590,39 +6590,40 @@
                 "symfony/polyfill-php84": "^1.30"
             },
             "conflict": {
-                "phpdocumentor/reflection-docblock": "<3.2.2",
-                "phpdocumentor/type-resolver": "<1.4.0",
+                "phpdocumentor/reflection-docblock": "<5.2|>=7",
+                "phpdocumentor/type-resolver": "<1.5.1",
                 "symfony/dependency-injection": "<6.4",
                 "symfony/property-access": "<6.4",
                 "symfony/property-info": "<6.4",
+                "symfony/type-info": "<7.2.5",
                 "symfony/uid": "<6.4",
                 "symfony/validator": "<6.4",
                 "symfony/yaml": "<6.4"
             },
             "require-dev": {
-                "phpdocumentor/reflection-docblock": "^3.2|^4.0|^5.0",
+                "phpdocumentor/reflection-docblock": "^5.2|^6.0",
                 "phpstan/phpdoc-parser": "^1.0|^2.0",
                 "seld/jsonlint": "^1.10",
-                "symfony/cache": "^6.4|^7.0",
-                "symfony/config": "^6.4|^7.0",
-                "symfony/console": "^6.4|^7.0",
-                "symfony/dependency-injection": "^7.2",
-                "symfony/error-handler": "^6.4|^7.0",
-                "symfony/filesystem": "^6.4|^7.0",
-                "symfony/form": "^6.4|^7.0",
-                "symfony/http-foundation": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/messenger": "^6.4|^7.0",
-                "symfony/mime": "^6.4|^7.0",
-                "symfony/property-access": "^6.4|^7.0",
-                "symfony/property-info": "^6.4|^7.0",
+                "symfony/cache": "^6.4|^7.0|^8.0",
+                "symfony/config": "^6.4|^7.0|^8.0",
+                "symfony/console": "^6.4|^7.0|^8.0",
+                "symfony/dependency-injection": "^7.2|^8.0",
+                "symfony/error-handler": "^6.4|^7.0|^8.0",
+                "symfony/filesystem": "^6.4|^7.0|^8.0",
+                "symfony/form": "^6.4|^7.0|^8.0",
+                "symfony/http-foundation": "^6.4|^7.0|^8.0",
+                "symfony/http-kernel": "^6.4|^7.0|^8.0",
+                "symfony/messenger": "^6.4|^7.0|^8.0",
+                "symfony/mime": "^6.4|^7.0|^8.0",
+                "symfony/property-access": "^6.4|^7.0|^8.0",
+                "symfony/property-info": "^6.4|^7.0|^8.0",
                 "symfony/translation-contracts": "^2.5|^3",
-                "symfony/type-info": "^7.1.8",
-                "symfony/uid": "^6.4|^7.0",
-                "symfony/validator": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0",
-                "symfony/var-exporter": "^6.4|^7.0",
-                "symfony/yaml": "^6.4|^7.0"
+                "symfony/type-info": "^7.2.5|^8.0",
+                "symfony/uid": "^6.4|^7.0|^8.0",
+                "symfony/validator": "^6.4|^7.0|^8.0",
+                "symfony/var-dumper": "^6.4|^7.0|^8.0",
+                "symfony/var-exporter": "^6.4|^7.0|^8.0",
+                "symfony/yaml": "^6.4|^7.0|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -6650,7 +6651,7 @@
             "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/serializer/tree/v7.3.5"
+                "source": "https://github.com/symfony/serializer/tree/v7.4.8"
             },
             "funding": [
                 {
@@ -6670,7 +6671,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-08T11:26:21+00:00"
+            "time": "2026-03-30T21:34:42+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -7705,50 +7706,45 @@
         },
         {
             "name": "tilleuls/forgot-password-bundle",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle.git",
-                "reference": "027a4508e0289c99d42a51937f2b8dfeb0fa1eb7"
+                "reference": "d971261200ce0f471767125d27dc89fb8bf17f91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coopTilleuls/CoopTilleulsForgotPasswordBundle/zipball/027a4508e0289c99d42a51937f2b8dfeb0fa1eb7",
-                "reference": "027a4508e0289c99d42a51937f2b8dfeb0fa1eb7",
+                "url": "https://api.github.com/repos/coopTilleuls/CoopTilleulsForgotPasswordBundle/zipball/d971261200ce0f471767125d27dc89fb8bf17f91",
+                "reference": "d971261200ce0f471767125d27dc89fb8bf17f91",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
-                "symfony/config": "^5.1 || ^6.0 || ^7.0",
-                "symfony/dependency-injection": "^5.1 || ^6.0 || ^7.0",
-                "symfony/event-dispatcher": "^5.1 || ^6.0 || ^7.0",
-                "symfony/http-foundation": "^5.1 || ^6.0 || ^7.0",
-                "symfony/http-kernel": "^5.1.5 || ^6.0 || ^7.0",
-                "symfony/serializer": "^5.1 || ^6.0 || ^7.0"
+                "symfony/config": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/dependency-injection": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/event-dispatcher": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/http-foundation": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/http-kernel": "^5.1.5 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/serializer": "^5.1 || ^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "api-platform/core": "^3.0 || ^4.0",
-                "behat/behat": "^3.1",
                 "dg/bypass-finals": "^1.1",
                 "doctrine/data-fixtures": "^1.2 || ^2.0",
-                "doctrine/doctrine-bundle": "^2.11",
+                "doctrine/doctrine-bundle": "^2.11 || ^3.0",
                 "doctrine/orm": "^2.6.3 || ^3.0",
                 "ext-json": "*",
-                "friends-of-behat/symfony-extension": "^2.0.11 || ^2.1.0",
                 "jms/serializer-bundle": "^1.4 || ^2.3 || ^3.0 || ^4.0 || ^5.0",
-                "laminas/laminas-code": "^3.4 || ^4.0",
-                "ocramius/proxy-manager": "^2.0.4",
-                "phpunit/phpunit": "^10.0 || ^11.0",
-                "symfony/asset": "^5.1 || ^6.0 || ^7.0",
-                "symfony/browser-kit": "^5.1 || ^6.0 || ^7.0",
-                "symfony/framework-bundle": "^5.1 || ^6.0 || ^7.0",
-                "symfony/mailer": "^5.1 || ^6.0 || ^7.0",
-                "symfony/property-access": "^5.1 || ^6.0 || ^7.0",
-                "symfony/security-bundle": "^5.1 || ^6.0 || ^7.0",
-                "symfony/stopwatch": "^5.1 || ^6.0 || ^7.0",
-                "symfony/templating": "^5.1 || ^6.0 || ^7.0",
-                "symfony/twig-bundle": "^5.1 || ^6.0 || ^7.0",
-                "symfony/var-dumper": "^5.1 || ^6.0 || ^7.0"
+                "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
+                "symfony/asset": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/browser-kit": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/framework-bundle": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/mailer": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/property-access": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/security-bundle": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/stopwatch": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/templating": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/twig-bundle": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+                "symfony/var-dumper": "^5.1 || ^6.0 || ^7.0 || ^8.0"
             },
             "suggest": {
                 "api-platform/openapi": "To connect with API Platform",
@@ -7756,11 +7752,6 @@
                 "doctrine/orm": "To connect with Doctrine"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.5.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "CoopTilleuls\\ForgotPasswordBundle\\": "src/"
@@ -7785,7 +7776,7 @@
             ],
             "support": {
                 "issues": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle/issues",
-                "source": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle/tree/v2.0.0"
+                "source": "https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -7793,7 +7784,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-15T08:41:21+00:00"
+            "time": "2026-03-17T09:25:11+00:00"
         },
         {
             "name": "twig/twig",
