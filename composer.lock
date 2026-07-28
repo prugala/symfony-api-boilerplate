@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62bae142b89f108f8a1ed6c5583fec30",
+    "content-hash": "fb2fd1dc0b22df1737bdc845f22e1c4a",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -8523,73 +8523,6 @@
             "time": "2025-11-20T15:15:16+00:00"
         },
         {
-            "name": "masterminds/html5",
-            "version": "2.10.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "fd5018f6815fff903946d0564977b44ce8010e29"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/fd5018f6815fff903946d0564977b44ce8010e29",
-                "reference": "fd5018f6815fff903946d0564977b44ce8010e29",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7 || ^8 || ^9 || ^10"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Masterminds\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matt Butcher",
-                    "email": "technosophos@gmail.com"
-                },
-                {
-                    "name": "Matt Farina",
-                    "email": "matt@mattfarina.com"
-                },
-                {
-                    "name": "Asmir Mustafic",
-                    "email": "goetas@gmail.com"
-                }
-            ],
-            "description": "An HTML5 parser and serializer.",
-            "homepage": "http://masterminds.github.io/html5-php",
-            "keywords": [
-                "HTML5",
-                "dom",
-                "html",
-                "parser",
-                "querypath",
-                "serializer",
-                "xml"
-            ],
-            "support": {
-                "issues": "https://github.com/Masterminds/html5-php/issues",
-                "source": "https://github.com/Masterminds/html5-php/tree/2.10.1"
-            },
-            "time": "2026-06-23T18:43:15+00:00"
-        },
-        {
             "name": "myclabs/deep-copy",
             "version": "1.13.4",
             "source": {
@@ -10930,27 +10863,27 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v7.3.6",
+            "version": "v8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "e9a9fd604296b17bf90939c3647069f1f16ef04e"
+                "reference": "f2ac86001ca9f487e8c6d0e11c8e33e6a9b8b2d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/e9a9fd604296b17bf90939c3647069f1f16ef04e",
-                "reference": "e9a9fd604296b17bf90939c3647069f1f16ef04e",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/f2ac86001ca9f487e8c6d0e11c8e33e6a9b8b2d5",
+                "reference": "f2ac86001ca9f487e8c6d0e11c8e33e6a9b8b2d5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
-                "symfony/dom-crawler": "^6.4|^7.0"
+                "php": ">=8.4.1",
+                "symfony/dom-crawler": "^7.4|^8.0"
             },
             "require-dev": {
-                "symfony/css-selector": "^6.4|^7.0",
-                "symfony/http-client": "^6.4|^7.0",
-                "symfony/mime": "^6.4|^7.0",
-                "symfony/process": "^6.4|^7.0"
+                "symfony/css-selector": "^7.4|^8.0",
+                "symfony/http-client": "^7.4|^8.0",
+                "symfony/mime": "^7.4|^8.0",
+                "symfony/process": "^7.4|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -10978,7 +10911,7 @@
             "description": "Simulates the behavior of a web browser, allowing you to make requests, click on links and submit forms programmatically",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/browser-kit/tree/v7.3.6"
+                "source": "https://github.com/symfony/browser-kit/tree/v8.1.1"
             },
             "funding": [
                 {
@@ -10998,7 +10931,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-05T07:57:47+00:00"
+            "time": "2026-06-09T10:54:51+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -11071,27 +11004,25 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v7.4.12",
+            "version": "v8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "b59b59122690976550fd142c23fab62c84738db6"
+                "reference": "1dfadd25537c8fcb6752cce5775f24647d976bdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/b59b59122690976550fd142c23fab62c84738db6",
-                "reference": "b59b59122690976550fd142c23fab62c84738db6",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/1dfadd25537c8fcb6752cce5775f24647d976bdc",
+                "reference": "1dfadd25537c8fcb6752cce5775f24647d976bdc",
                 "shasum": ""
             },
             "require": {
-                "masterminds/html5": "^2.6",
-                "php": ">=8.2",
-                "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": ">=8.4.1",
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-mbstring": "^1.0"
             },
             "require-dev": {
-                "symfony/css-selector": "^6.4|^7.0|^8.0"
+                "symfony/css-selector": "^7.4|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -11119,7 +11050,7 @@
             "description": "Eases DOM navigation for HTML and XML documents",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dom-crawler/tree/v7.4.12"
+                "source": "https://github.com/symfony/dom-crawler/tree/v8.1.1"
             },
             "funding": [
                 {
@@ -11139,7 +11070,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-20T07:20:23+00:00"
+            "time": "2026-06-05T06:23:12+00:00"
         },
         {
             "name": "symfony/maker-bundle",
